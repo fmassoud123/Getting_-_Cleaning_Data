@@ -16,11 +16,10 @@ subject  <- rbind(subjectTrain, subjectTest)
 activity <- rbind(activityTrain, activityTest)
 features <- rbind(featuresTrain, featuresTest)
 ##   Naming the columns
-
 colnames(features) <- t(featureNames[2])
  ##  Merge the data
 colnames(activity) <- "Activity"
-colnames(subject) <- "Subject"
+colnames(subject)  <- "Subject"
 completeData <- cbind(features,activity,subject)
 
 names(completeData)<-gsub("Acc", "Accelerometer", names(completeData))
